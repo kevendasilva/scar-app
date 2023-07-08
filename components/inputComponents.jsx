@@ -10,9 +10,10 @@ export function DefaultButton(props) {
   if (!fontsLoaded) {
     return null;
   }
+  const { onPress } = props;
   const { title } = props;
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={onPress}>
       <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
   );
