@@ -1,7 +1,15 @@
 /* eslint-disable prettier/prettier */
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { useFonts, Lato_400Regular } from '@expo-google-fonts/lato';
 
 export function DefaultButton(props) {
+  let [fontsLoaded] = useFonts({
+    Lato_400Regular,
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
   const { title } = props;
   return (
     <TouchableOpacity style={styles.button}>
@@ -22,5 +30,6 @@ const styles = StyleSheet.create({
     color: '#D9D9D9',
     fontSize: 16,
     fontWeight: 500,
+    fontFamily: 'Lato_400Regular',
   },
 });

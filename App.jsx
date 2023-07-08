@@ -1,9 +1,18 @@
 /* eslint-disable prettier/prettier */
 import { Text, View, StyleSheet, Image } from 'react-native';
+import { useFonts, Lato_400Regular } from '@expo-google-fonts/lato';
 import { DefaultButton } from './components/inputComponents';
 import Logo from './assets/Logo.png';
 
 export default function Home() {
+  let [fontsLoaded] = useFonts({
+    Lato_400Regular,
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.flexColumn}>
@@ -33,6 +42,7 @@ export const styles = StyleSheet.create({
   defaultText: {
     fontSize: 16,
     fontWeight: 400,
+    fontFamily: 'Lato_400Regular',
     textAlign: 'center',
     color: '#282C40',
   },
