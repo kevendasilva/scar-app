@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet, Image } from 'react-native';
-import { DefaultButton } from './../components/inputComponents';
+import { DefaultButton, TextInputLogin } from './../components/inputComponents';
 import SignInImage from './../assets/SignIn.png';
 
 export function SignIn() {
@@ -12,7 +12,11 @@ export function SignIn() {
         <Text style={styles.defaultTitle}>
           Faça o login para acessar sua conta.
         </Text>
-        <DefaultButton title="Entrar" />
+        <View>
+          <TextInputLogin placeholder="E-mail" />
+          <TextInputLogin placeholder="Senha" secureTextEntry={true} />
+          <DefaultButton title="Entrar" />
+        </View>
       </View>
     </View>
   );

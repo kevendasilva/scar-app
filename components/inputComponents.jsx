@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet, TextInput } from 'react-native';
 import { useFonts, Lato_400Regular } from '@expo-google-fonts/lato';
 
 export function DefaultButton(props) {
@@ -19,6 +19,18 @@ export function DefaultButton(props) {
   );
 }
 
+export function TextInputLogin(props) {
+  const { placeholder } = props;
+  const { secureTextEntry } = props;
+  return (
+    <TextInput
+      placeholder={placeholder}
+      style={styles.textInput}
+      secureTextEntry={secureTextEntry}
+    />
+  );
+}
+
 const styles = StyleSheet.create({
   button: {
     padding: 18,
@@ -32,5 +44,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 500,
     fontFamily: 'Lato_400Regular',
+  },
+  textInput: {
+    padding: 20,
+    borderRadius: 20,
+    marginBottom: 12,
+    backgroundColor: '#D9D9D9',
   },
 });
