@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@expo-google-fonts/lato": "^0.2.3",
+    "@expo/vector-icons": "^13.0.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
     "babel-eslint": "^10.1.0",
