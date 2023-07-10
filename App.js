@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Clients } from './pages/Clients';
 import { SignIn } from './pages/SignIn';
 import { Homepage } from './pages/Homepage';
 import { SignUp } from './pages/SignUp';
@@ -21,6 +22,13 @@ export default function App() {
         <Stack.Screen name="Homepage" component={Homepage} />
         <Stack.Screen name="SignIn" component={SignIn} />
         <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen
+          name="Clients"
+          component={Clients}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
