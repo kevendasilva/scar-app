@@ -1,5 +1,4 @@
 /* eslint-disable prettier/prettier */
-import { Text, View, StyleSheet, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SignIn } from './pages/SignIn';
@@ -26,4 +25,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
