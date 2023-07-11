@@ -10,6 +10,7 @@ import { Updates } from './pages/Updates';
 import { Index } from './pages/Index';
 import { DoorLockPage } from './pages/DoorLockPage';
 import { EditUser } from './pages/EditUser';
+import { DoorLockForm } from './pages/DoorLockForm';
 
 const Stack = createNativeStackNavigator();
 
@@ -63,6 +64,7 @@ export default function App() {
             headerShown: false,
           }}
         />
+        <Stack.Screen name="DoorLockForm" component={DoorLockForm} />
       </Stack.Navigator>
     </NavigationContainer>
   );
