@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Clients } from './pages/Clients';
 import { SignIn } from './pages/SignIn';
-import { Homepage } from './pages/Homepage';
+import { HomePage } from './pages/HomePage';
 import { SignUp } from './pages/SignUp';
 import { Updates } from './pages/Updates';
 
@@ -23,7 +23,13 @@ export default function App() {
       }}
     >
       <Stack.Navigator>
-        <Stack.Screen name="Homepage" component={Homepage} />
+        <Stack.Screen
+          name="HomePage"
+          component={HomePage}
+          options={{
+            headerShown: false,
+          }}
+        />
         <Stack.Screen name="SignIn" component={SignIn} />
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen

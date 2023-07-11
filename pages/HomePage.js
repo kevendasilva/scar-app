@@ -5,10 +5,10 @@ import {
   Lato_400Regular,
   Lato_700Bold,
 } from '@expo-google-fonts/lato';
-import { DefaultButton } from './../components/inputComponents';
+import { DefaultButton } from '../components/inputComponents';
 import Logo from './../assets/Logo.png';
 
-export function Homepage({ navigation }) {
+export function HomePage({ navigation }) {
   let [fontsLoaded] = useFonts({
     Lato_400Regular,
     Lato_700Bold,
@@ -45,9 +45,8 @@ export function Homepage({ navigation }) {
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingVertical: 75,
     paddingHorizontal: 36,
-    marginVertical: 90,
+    justifyContent: 'center',
   },
   defaultText: {
     fontSize: 16,
