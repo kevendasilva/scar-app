@@ -8,6 +8,7 @@ import { SignUp } from './pages/SignUp';
 import { Updates } from './pages/Updates';
 
 import { Index } from './pages/Index';
+import { DoorLockPage } from './pages/DoorLockPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -43,6 +44,13 @@ export default function App() {
           name="Index"
           component={Index}
           initialParams={{ userName: 'Dr. Evil' }}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="DoorLockPage"
+          component={DoorLockPage}
           options={{
             headerShown: false,
           }}
