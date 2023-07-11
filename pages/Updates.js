@@ -1,6 +1,5 @@
 import { View, Text } from 'react-native';
 
-import { BackButton } from '../components/BackButton';
 import { Update } from '../components/Update';
 import { styles } from '../styles/Updates';
 
@@ -31,7 +30,6 @@ export function Updates() {
 
   return (
     <View style={styles.container}>
-      <BackButton />
       <Text style={styles.title}>Atualizações:</Text>
       <View style={styles.updatesList}>
         {updatesData.map((update) => (

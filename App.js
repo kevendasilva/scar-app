@@ -49,20 +49,8 @@ export default function App() {
             headerShown: false,
           }}
         />
-        <Stack.Screen
-          name="Updates"
-          component={Updates}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name="Clients"
-          component={Clients}
-          options={{
-            headerShown: false,
-          }}
-        />
+        <Stack.Screen name="Updates" component={Updates} />
+        <Stack.Screen name="Clients" component={Clients} />
         <Stack.Screen name="DoorLockForm" component={DoorLockForm} />
         <Stack.Screen name="EditUser" component={EditUser} />
       </Stack.Navigator>

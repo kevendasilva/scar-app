@@ -13,7 +13,7 @@ export function Index({ navigation, route }) {
   const locksData = [
     {
       id: 1,
-      name: 'Escritório',
+      name: 'Laboratório',
       locked: true,
     },
   ];
@@ -29,7 +29,12 @@ export function Index({ navigation, route }) {
         <Text style={styles.label}>Gerencie suas fechaduras:</Text>
         <View style={styles.locksList}>
           {locksData.map((lock) => (
-            <DoorLock key={lock.id} name={lock.name} locked={lock.locked} />
+            <DoorLock
+              key={lock.id}
+              name={lock.name}
+              locked={lock.locked}
+              navigation={navigation}
+            />
           ))}
         </View>
       </View>
