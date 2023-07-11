@@ -2,7 +2,7 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 import { DefaultButton, TextInputLogin } from '../components/inputComponents';
 import SignInImage from '../assets/SignIn.png';
 
-export function SignIn() {
+export function SignIn({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={[styles.flexColumn, { columnGap: 24 }]}>
@@ -15,7 +15,10 @@ export function SignIn() {
         <View>
           <TextInputLogin placeholder="E-mail" />
           <TextInputLogin placeholder="Senha" />
-          <DefaultButton title="Entrar" />
+          <DefaultButton
+            title="Entrar"
+            onPress={() => navigation.navigate('Index')}
+          />
         </View>
       </View>
     </View>
