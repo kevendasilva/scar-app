@@ -1,28 +1,19 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import { Navbar } from '../components/Navbar';
 import { DoorLock } from '../components/DoorLock';
+import { Menu } from '../components/Menu';
+import { Navbar } from '../components/Navbar';
 
 import { styles } from '../styles/Index';
 
-export function Index({ route }) {
+export function Index({ navigation, route }) {
   const { userName } = route.params;
 
   const locksData = [
     {
       id: 1,
-      name: 'Fechadura 1',
-      locked: true,
-    },
-    {
-      id: 2,
-      name: 'Fechadura 2',
-      locked: false,
-    },
-    {
-      id: 3,
-      name: 'Fechadura 3',
+      name: 'Escritório',
       locked: true,
     },
   ];
@@ -42,6 +33,7 @@ export function Index({ route }) {
           ))}
         </View>
       </View>
+      <Menu navigation={navigation} />
     </View>
   );
 }
