@@ -9,6 +9,7 @@ import { Updates } from './pages/Updates';
 
 import { Index } from './pages/Index';
 import { DoorLockPage } from './pages/DoorLockPage';
+import { EditUser } from './pages/EditUser';
 
 const Stack = createNativeStackNavigator();
 
@@ -54,6 +55,7 @@ export default function App() {
             headerShown: false,
           }}
         />
+        <Stack.Screen name="EditUser" component={EditUser} />
         <Stack.Screen
           name="DoorLockPage"
           component={DoorLockPage}
