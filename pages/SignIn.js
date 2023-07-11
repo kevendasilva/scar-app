@@ -1,6 +1,6 @@
 import { Text, View, StyleSheet, Image } from 'react-native';
-import { DefaultButton, TextInputLogin } from './../components/inputComponents';
-import SignInImage from './../assets/SignIn.png';
+import { DefaultButton, TextInputLogin } from '../components/inputComponents';
+import SignInImage from '../assets/SignIn.png';
 
 export function SignIn() {
   return (
@@ -14,7 +14,7 @@ export function SignIn() {
         </Text>
         <View>
           <TextInputLogin placeholder="E-mail" />
-          <TextInputLogin placeholder="Senha" secureTextEntry={true} />
+          <TextInputLogin placeholder="Senha" />
           <DefaultButton title="Entrar" />
         </View>
       </View>
@@ -25,9 +25,8 @@ export function SignIn() {
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingVertical: 75,
     paddingHorizontal: 36,
-    marginVertical: 90,
+    justifyContent: 'center',
   },
   defaultText: {
     fontSize: 16,
