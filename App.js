@@ -5,6 +5,7 @@ import { Clients } from './pages/Clients';
 import { SignIn } from './pages/SignIn';
 import { Homepage } from './pages/Homepage';
 import { SignUp } from './pages/SignUp';
+import { Updates } from './pages/Updates';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,13 @@ export default function App() {
         <Stack.Screen
           name="Clients"
           component={Clients}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Updates"
+          component={Updates}
           options={{
             headerShown: false,
           }}
