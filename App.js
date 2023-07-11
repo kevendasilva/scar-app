@@ -7,6 +7,8 @@ import { Homepage } from './pages/Homepage';
 import { SignUp } from './pages/SignUp';
 import { Updates } from './pages/Updates';
 
+import { Index } from './pages/Index';
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -33,6 +35,14 @@ export default function App() {
         <Stack.Screen
           name="Updates"
           component={Updates}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Index"
+          component={Index}
+          initialParams={{ userName: 'Dr. Evil' }}
           options={{
             headerShown: false,
           }}
